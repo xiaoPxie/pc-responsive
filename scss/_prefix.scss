@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/* 添加动画前缀 */
+@mixin prefix-keyframes($name, $options: [webkit moz o ms]) {
+  @keyframes #{$name} {
+    @content;
+  }
+  @each $option in $options {
+    @if $option == webkit {
+      @-webkit-keyframes #{$name} {
+        @content;
+      }
+    }
+    @else if $option == moz {
+      @-moz-keyframes #{$name} {
+        @content;
+      }
+    }
+    @else if $option == o {
+      @-o-keyframes #{$name} {
+        @content;
+      }
+    }
+    @else if $option == ms {
+      @-ms-keyframes #{$name} {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin prefix($style-name, $value, $options: webkit moz o ms) {
+  #{$style-name}: $value;
+
+  @each $option in $options {
+    @if $option == webkit {
+      -webkit-#{$style-name}: #{$value};
+    }
+    @else if $option == moz {
+      -moz-#{$style-name}: #{$value};
+    }
+    @else if $option == o {
+      -o-#{$style-name}: #{$value};
+    }
+    @else if $option == ms {
+      -ms-#{$style-name}: #{$value};
+    }
+  }
+}
+

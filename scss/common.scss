@@ -1,0 +1,272 @@
+@charset "UTF-8";
+
+@import "./prefix";
+
+html {
+  overflow: hidden;
+}
+
+//左侧导航栏
+.common-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 201px;
+  height: 100%;
+  background: #242b34;
+  z-index: 100;
+  @include prefix(transition, left 1s ease);
+
+  & > .nav-header {
+    position: relative;
+    width: inherit;
+    height: 75px;
+    background: #018eed;
+
+    & > .logo-item {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 119px;
+      height: 40px;
+      margin: auto;
+    }
+  }
+
+  & > .nav-wrap {
+    width: 100%;
+    height: calc(100% - 75px);
+    padding: 10px 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    a {
+      display: block;
+      position: relative;
+      padding-left: 31px;
+      &:link { color: #888f97; }
+      &:hover { color: #888f97; }
+      &:visited { color: #888f97; }
+    }
+    img {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      border: none;
+    }
+
+    .nav-list {
+
+      .nav-item {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        &.active {
+          background: #282c35;
+        }
+        &.active:before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          width: 6px;
+          height: 100%;
+          background: #018eed;
+        }
+        .icon {
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+          &.icon-index {
+            width: 26px;
+            height: 28px;
+            background: url("../image/icon.png") no-repeat 0 0;
+            &.active {
+              background: url("../image/icon.png") no-repeat -26px 0;
+            }
+          }
+          &.icon-security {
+            width: 23px;
+            height: 29px;
+            background: url("../image/icon.png") no-repeat -52px 0;
+            &.active {
+              background: url("../image/icon.png") no-repeat -75px 0;
+            }
+          }
+          &.icon-traffic {
+            width: 20px;
+            height: 32px;
+            background: url("../image/icon.png") no-repeat -98px 0;
+            &.active {
+              background: url("../image/icon.png") no-repeat -118px 0;
+            }
+          }
+          &.icon-drug {
+            width: 28px;
+            height: 30px;
+            background: url("../image/icon.png") no-repeat -138px 0;
+            &.active {
+              background: url("../image/icon.png") no-repeat -166px 0;
+            }
+          }
+          &.icon-legal {
+            width: 24px;
+            height: 26px;
+            background: url("../image/icon.png") no-repeat -193px 0;
+            &.active {
+              background: url("../image/icon.png") no-repeat -217px 0;
+            }
+          }
+          &.icon-data-analysis {
+            width: 30px;
+            height: 32px;
+            background: url("../image/icon.png") no-repeat -242px 0;
+            &.active {
+              background: url("../image/icon.png") no-repeat -272px 0;
+            }
+          }
+          &.icon-personnel-input {
+            width: 33px;
+            height: 34px;
+            background: url("../image/icon.png") no-repeat -303px 0;
+            &.active {
+              background: url("../image/icon.png") no-repeat -337px 0;
+            }
+          }
+          &.icon-comprehensive {
+            width: 28px;
+            height: 29px;
+            background: url("../image/icon.png") no-repeat -370px 0;
+            &.active {
+              background: url("../image/icon.png") no-repeat -398px 0;
+            }
+          }
+        }
+        .text {
+          margin-left: 45px;
+
+          &.active { color: #fff; }
+        }
+      }
+    }
+  }
+}
+
+//顶部信息栏
+.top-bar {
+  position: fixed;
+  top: 0;
+  //left: 201px;
+  width: 100%;
+  height: 75px;
+  line-height: 74px;
+  background: #fff;
+  z-index: 51;
+  @include prefix(box-shadow, -1px -1px 10px rgba(0,0,0,0.5));
+
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    color: #111;
+  }
+
+  & > .wrap {
+    position: relative;
+    height: 100%;
+    margin-left: 201px;
+    & .warp-l {
+      float: left;
+      height: 100%;
+
+      .icon-btn {
+        width: 19px;
+        height: 19px;
+        margin: 0 50px 0 39px;
+        background: url("../image/icon.png") no-repeat 0 -32px;
+      }
+      .bar-text {
+        font-size: 16.45px;
+        color: #2b2b2b;
+      }
+    }
+    & .warp-r {
+      float: right;
+      display: block;
+      height: 100%;
+      font-size: 0;
+      @include prefix(display, 1s ease);
+
+      //a { color: #111; }
+      .sysinfo-btn {
+        position: relative;
+        margin-right: 61px;
+        font-size: 19.2px;
+        .red-dot {
+          display: inline-block;
+          position: absolute;
+          top: 14px;
+          width: 26px;
+          height: 26px;
+          border-radius: 50px;
+          text-align: center;
+          font-size: 16.45px;
+          line-height: 26px;
+          color: #fff;
+          background: #fd4b4b;
+        }
+      }
+      .register-btn, .login-btn { font-size: 19.2px; }
+      .seperate-l {
+        display: inline-block;
+        width: 1px;
+        height: 18px;
+        margin: 0 2px;
+        vertical-align: middle;
+        background: #111;
+      }
+      .seperate-r {
+        display: inline-block;
+        width: 3px;
+        height: 18px;
+        margin: 0 24px;
+        vertical-align: middle;
+        background: #e0e0e0;
+      }
+      .logout-btn {
+        width: 23px;
+        height: 24px;
+        margin-right: 28px;
+        background: url("../image/icon.png") no-repeat -19px -32px;
+      }
+    }
+    .operation-set {
+      display: none;
+      float: right;
+      width: 100px;
+      text-align: center;
+      &.active {
+        background: rgba(136, 143, 151, 0.3);
+      }
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  z-index: -1;
+  @include prefix(transition, opacity 0.5s ease);
+}
