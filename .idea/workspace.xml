@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d8679f0-5bd5-4084-85d6-c4a5d869da81" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/common.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/common.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/common.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +36,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\pc-responsive" />
+      <recent name="C:\Users\Administrator\Desktop\pc-responsive\scss" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\pc-responsive\dist\html5hack" />
       <recent name="C:\Users\Administrator\Desktop\pc-responsive\dist" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\pc-responsive\scss" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -72,7 +69,7 @@
       <updated>1580975688691</updated>
       <workItem from="1580975690283" duration="18532000" />
       <workItem from="1581045207578" duration="12576000" />
-      <workItem from="1581253072867" duration="611000" />
+      <workItem from="1581253072867" duration="902000" />
     </task>
     <servers />
   </component>
